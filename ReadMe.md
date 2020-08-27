@@ -3,3 +3,4 @@
 - 斐波那契数列									 Fibonacci
 - 凑零钱                                        PickCoins
 - 全排列                                        BackTrace
+- N皇后                                         NQueen
