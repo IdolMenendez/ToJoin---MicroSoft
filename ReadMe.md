@@ -4,5 +4,4 @@
 - 凑零钱                                        PickCoins
 - 全排列                                        BackTrace
 - N皇后                                         NQueen
-- 二分法                                        BinarySearch
-- 二分法并查找左侧边界                           LeftBoundSearch
+- 二分法（包含左右边界的二分法）                  BinarySearch
