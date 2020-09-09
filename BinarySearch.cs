@@ -71,4 +71,55 @@ public class Solution {
 		if (left == 0) return -1;
 		return nums[left -1] == result ?nums[left -1]:-1;
 	}
+
+    //寻找左侧边界 ,以实际数组长度开始
+	public int BinarySearch_LeftBorder(int[] nums,int result)
+	{
+		int left = 0;
+		int right = nums.Length - 1;
+		while(left <= right)
+		{
+			int mid = left + (right - left)/2;
+			if(nums[mid] == result)
+			{
+				right = mid - 1;
+			}
+			else if(nums[mid] < result)
+			{
+				left = mid + 1;
+			}
+			else if(nums[mid] > result)
+			{
+				right = mid - 1;
+			}
+		}
+		if(left >= nums.Length || nums[left] != target) return -1;
+		return left;
+	}
+
+    //寻找右侧边界 ,以实际数组长度开始
+	public int BinarySearch_RightBorder(int[] nums,int result)
+	{
+		int left = 0;
+		int right = nums.Length - 1;
+		while(left <= right)
+		{
+			int mid = left + (right - left)/2;
+			if(nums[mid] == result)
+			{
+				left = mid + 1;
+			}
+			else if(nums[mid] < result)
+			{
+				left = mid + 1;
+			}
+			else if(nums[mid] > result)
+			{
+				right = mid - 1;
+			}
+		}
+		if(right < 0 || nums[right] != target) return -1;
+		return right;
+	}
+
 }
