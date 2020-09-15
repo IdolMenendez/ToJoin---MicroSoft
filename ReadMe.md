@@ -5,3 +5,4 @@
 - 全排列                                        BackTrace
 - N皇后                                         NQueen
 - 二分法（包含左右边界的二分法）                  BinarySearch
+- 滑动窗口解法（寻找最小子串）                    WindowFunc
